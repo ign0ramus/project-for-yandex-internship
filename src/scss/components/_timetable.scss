@@ -1,0 +1,105 @@
+.timetable {
+    display: flex;
+    justify-content: center;
+
+    &__wrapper {
+        width: 100%;
+        max-width: 80rem;
+        border: 1px solid $color-primary;
+        border-radius: 1rem;
+        padding: 3rem;
+
+        @include respond(phone) {
+            padding: 1rem;
+            border: none;
+        }
+    }
+
+    &__flight-type {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__toggler {
+        flex-basis: 30%;
+        font-size: 1.5rem;
+        height: 5rem;
+    }
+
+    &__search {
+        width: 50%;
+        margin: 1.5rem auto;
+        display: flex;
+        
+        @include respond(phone) {
+            width: 100%;
+        }
+
+        &-input {
+            height: 3rem;
+            flex-basis: 80%;
+        }
+        &-btn {
+            font-size: 1.5rem;
+            flex-basis: 20%;
+        }
+    }
+    
+    &__plane {
+        @include respond(phone) {
+            display: none;
+        }
+    }
+
+    &__content {
+        border: 1px solid $color-primary;
+        border-radius: 6px;
+        box-shadow: 0 1px 1px $color-primary;
+        margin-top: 2rem;
+        width: 100%;
+    }
+    &__flight {
+        font-size: 1.5rem;
+
+        &:hover {
+            background: $color-secondary;
+            transition: all 0.1s ease-in-out;
+        }
+        & > * {
+            border-left: 1px solid $color-primary;
+            border-top: 1px solid $color-primary;
+            padding: .5rem;
+        }
+        & :first-child {
+            border-left: none;
+        }
+    }
+
+    &__head {
+        th {
+            background-color: $darker-blue;
+            background-image: -webkit-gradient(linear, left top, left bottom, from($light-blue), to($darker-blue));
+            background-image: -webkit-linear-gradient(top, $light-blue, $darker-blue);
+            background-image:    -moz-linear-gradient(top, $light-blue, $darker-blue);
+            background-image:     -ms-linear-gradient(top, $light-blue, $darker-blue);
+            background-image:      -o-linear-gradient(top, $light-blue, $darker-blue);
+            background-image:         linear-gradient(top, $light-blue, $darker-blue); 
+            border-top: none;
+        }
+        & :first-child {
+            border-radius: .5rem 0 0 0;
+        }
+        & :last-child {
+            border-radius: 0 .5rem 0 0;
+        }
+    }
+
+    &__number {
+        white-space: nowrap;
+
+        @include respond(phone) {
+            white-space: normal;
+        }
+    }
+}

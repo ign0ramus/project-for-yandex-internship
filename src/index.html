@@ -7,6 +7,39 @@
     <title>Тестовое задание</title>
 </head>
 <body>
-    
+    <header class="header">
+        <div class="header__text">
+            <h1 class="header__title">Онлайн табло аэропорта Пулково, г. Санкт-Петербург*</h1>
+            <p class="header__subtext">*Тестовое задание на стажировку в <span style="color: red">Я</span>ндексе</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="timetable">
+        <div class="timetable__wrapper">
+            <div class="timetable__flight-type">
+                <button class="timetable__toggler button button--active" data-event="departure">Вылет</button>
+                <button class="timetable__toggler button" data-event="arrival">Прилет</button>
+                <button class="timetable__toggler button" data-event="delayed">Задержанные рейсы</button>
+            </div>
+            <div class="timetable__search">
+                <input type="text" class="timetable__search-input search-input" placeholder="Введите номер рейса" tabindex="1"><button class="timetable__search-btn button">Поиск</button>
+            </div>
+            <table class="timetable__content">
+                <tbody class="timetable__tbody">
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__copyright">
+            <iframe class="footer__iframe yandex-logo" frameborder="0" 
+            style="overflow: hidden; border: 0;" 
+            src="//yandex.st/rasp/media/apicc/copyright_vert_yellow.html"> 
+            </iframe>
+        </p>
+    </footer>
 </body>
 </html>

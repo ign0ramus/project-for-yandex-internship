@@ -6,12 +6,10 @@ const ErrorOverlayWebpackPlugin = require('error-overlay-webpack-plugin');
 module.exports = {
     mode: 'development',
     devtool: 'inline-source-map',
-    entry: {
-        main: './src/index.js'
-    },
+    entry: ['babel-polyfill', './src/index.js'],
     output: {
         path: path.resolve(__dirname, '../dist'),
-        filename: '[name].js'
+        filename: 'bundle.js'
     },
     devServer: {
         contentBase: 'dist',
@@ -27,12 +25,14 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/env']
+                        presets: [
+                            '@babel/env'
+                        ]
                     }
                 }
             },
             {
-                test: /\.scss/,
+                test: /\.scss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
             }
         ]

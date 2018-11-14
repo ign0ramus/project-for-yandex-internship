@@ -1,0 +1,13 @@
+.header {
+    text-align: center;
+    &__title {
+        font-size: 2rem;
+    }
+    &__text {
+        display: inline-block;
+    }
+    &__subtext {
+        text-align: left;
+        font-size: 1rem;
+    }
+}

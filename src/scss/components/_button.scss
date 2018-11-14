@@ -1,0 +1,29 @@
+.button {
+    background-color: $color-primary;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    box-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.3);
+    transition: all .2s;
+
+    &:hover {
+        background-color: darken($color: $color-primary, $amount: 10%);
+    }
+    &:active {
+        background-color: darken($color-primary, 25%);
+        box-shadow: inset 0 0 .5rem .1rem rgba(0, 0, 0, 0.3);
+    }
+
+    &--active {
+        background-color: darken($color: $color-secondary, $amount: 10%);
+        transition: all .2s;
+
+        &:hover {
+            background-color: darken($color: $color-secondary, $amount: 20%);
+        }
+        &:active {
+            background-color: darken($color-secondary, 25%);
+            box-shadow: inset 0 0 .5rem .1rem rgba(0, 0, 0, 0.3);
+        }
+    }
+}
